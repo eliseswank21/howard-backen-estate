@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" data-editor-preserved="true">
+    
+    
+    <title>The Howard Backen Estate — Pritchard Hill, Napa Valley</title>
+    
+    
+    
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        background-color: #f5f0e8;
+        color: #1a1614;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 19px;
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        position: relative;
+        width: 100%;
+        min-height: 720px;
+        height: 100vh;
+        max-height: 960px;
+        overflow: hidden;
+      }
+      .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+        display: block;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(20, 14, 10, 0.35) 0%,
+          rgba(20, 14, 10, 0.65) 55%,
+          rgba(14, 11, 9, 0.90) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 32px;
+      }
+      .hero-eyebrow {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 24px;
+      }
+      .hero-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(40px, 6.5vw, 78px);
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        color: #f5f0e8;
+        line-height: 1.08;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .hero-rule {
+        width: 60px;
+        height: 1px;
+        background: #b8974a;
+        margin: 0 auto 24px;
+      }
+      .hero-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11.5px;
+        font-weight: 400;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #d4c9b4;
+        max-width: 700px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .hero-tagline {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(184, 151, 74, 0.9);
+      }
+
+      /* ── COMMON SECTION UTILITIES ── */
+      section {
+        width: 100%;
+        position: relative;
+      }
+      .section-label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .section-heading {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #1a1614;
+        margin-bottom: 28px;
+      }
+      .section-heading.light {
+        color: #f5f0e8;
+      }
+      .section-rule-gold {
+        width: 48px;
+        height: 1px;
+        background: #b8974a;
+        margin: 40px auto 0;
+      }
+
+      /* ── 30-SECOND PITCH BANNER ── */
+      .pitch-banner {
+        background: #14100d;
+        color: #f5f0e8;
+        padding: 70px 48px;
+        text-align: center;
+        border-bottom: 1px solid rgba(184, 151, 74, 0.25);
+      }
+      .pitch-text {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.65;
+        max-width: 860px;
+        margin: 0 auto 30px;
+        color: #ede8de;
+      }
+      .pitch-pillars {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: 0.38em;
+        text-transform: uppercase;
+        color: #b8974a;
+      }
+
+      /* ── TWO-COLUMN SPLIT SECTIONS ── */
+      .split-section {
+        display: flex;
+        align-items: stretch;
+        min-height: 580px;
+      }
+      .split-text {
+        width: 50%;
+        padding: 80px 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .split-image {
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+      .split-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .split-image.wine-bg {
+        background: #19130f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+      .split-image.wine-bg img {
+        object-fit: contain;
+        object-position: center;
+        max-height: 90%;
+      }
+
+      /* ── PROSE PARAGRAPHS ── */
+      .editorial-p {
+        font-size: 18.5px;
+        font-weight: 300;
+        line-height: 1.85;
+        color: #2b231d;
+        margin-bottom: 20px;
+      }
+      .editorial-p:last-child {
+        margin-bottom: 0;
+      }
+      .editorial-p.light {
+        color: #d4c9b4;
+      }
+
+      /* ── ESTATE HIGHLIGHTS PANEL ── */
+      .highlights-section {
+        background: #ede8de;
+        padding: 90px 80px;
+      }
+      .highlights-container {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: 50px;
+        border-top: 1px solid #d4c9b4;
+        border-bottom: 1px solid #d4c9b4;
+        padding: 36px 0;
+      }
+      .stat-card {
+        text-align: center;
+      }
+      .stat-num {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 46px;
+        font-weight: 300;
+        color: #1a1614;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .stat-label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #b8974a;
+      }
+      .residences-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+      .residence-box {
+        background: #f5f0e8;
+        padding: 32px;
+        border-left: 3px solid #b8974a;
+      }
+      .residence-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #1a1614;
+        margin-bottom: 8px;
+      }
+      .residence-size {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 14px;
+      }
+      .residence-desc {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #3e352f;
+      }
+
+      /* ── CINEMATIC STRIP ── */
+      .cinematic-strip {
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+        position: relative;
+      }
+      .cinematic-strip img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 60%;
+        display: block;
+      }
+
+      /* ── FOUR PILLARS / HOW TO SELL ── */
+      .pillars-section {
+        background: #1a1614;
+        color: #f5f0e8;
+        padding: 100px 80px;
+      }
+      .pillars-header {
+        text-align: center;
+        max-width: 820px;
+        margin: 0 auto 60px;
+      }
+      .pillars-positioning {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 300;
+        color: #f5f0e8;
+        line-height: 1.5;
+        margin-top: 18px;
+      }
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1160px;
+        margin: 0 auto;
+      }
+      .pillar-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(184, 151, 74, 0.25);
+        padding: 36px 28px;
+        display: flex;
+        flex-direction: column;
+      }
+      .pillar-num {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #b8974a;
+        margin-bottom: 14px;
+      }
+      .pillar-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: #f5f0e8;
+        margin-bottom: 16px;
+      }
+      .pillar-body {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #d4c9b4;
+      }
+
+      /* ── SELLING POINTS STRIP ── */
+      .points-section {
+        background: #f5f0e8;
+        padding: 90px 80px;
+        border-bottom: 1px solid #d4c9b4;
+      }
+      .points-container {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      .points-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin-top: 40px;
+      }
+      .point-item {
+        background: #ede8de;
+        padding: 30px;
+        border-top: 2px solid #b8974a;
+      }
+      .point-item h4 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 21px;
+        font-weight: 500;
+        color: #1a1614;
+        margin-bottom: 12px;
+      }
+      .point-item p {
+        font-size: 15.5px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #3a312a;
+      }
+
+      /* ── THE FRENCH LAUNDRY & TKRG ── */
+      .tkrg-section {
+        background: #0e0b09;
+        color: #f5f0e8;
+        padding: 100px 90px;
+        text-align: center;
+        border-top: 1px solid rgba(184, 151, 74, 0.2);
+        border-bottom: 1px solid rgba(184, 151, 74, 0.2);
+      }
+      .tkrg-container {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .tkrg-quote {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 29px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #f5f0e8;
+        margin: 36px 0;
+      }
+      .tkrg-author {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 40px;
+      }
+      .tkrg-policy-note {
+        background: rgba(255, 255, 255, 0.04);
+        border-left: 2px solid #b8974a;
+        padding: 22px 30px;
+        text-align: left;
+        font-size: 15.5px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #d4c9b4;
+      }
+
+      /* ── SIGNATURE EXPERIENCES VIGNETTES ── */
+      .experiences-section {
+        background: #231b14;
+        color: #f5f0e8;
+        padding: 100px 80px;
+      }
+      .experiences-container {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      .vignettes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        margin-top: 48px;
+      }
+      .vignette-card {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(184, 151, 74, 0.22);
+        padding: 38px 34px;
+      }
+      .vignette-tag {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 12px;
+      }
+      .vignette-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: #f5f0e8;
+        margin-bottom: 16px;
+      }
+      .vignette-body {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.75;
+        color: #d4c9b4;
+      }
+
+      /* ── ARRIVAL & ACCESSIBILITY SECTION ── */
+      .logistics-section {
+        background: #ede8de;
+        padding: 90px 80px;
+      }
+      .logistics-container {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+      .logistics-box {
+        background: #f5f0e8;
+        padding: 44px 40px;
+        border-top: 2px solid #b8974a;
+      }
+
+      /* ── TEAM BIOS ── */
+      .team-section {
+        background: #f5f0e8;
+        padding: 90px 80px;
+        border-top: 1px solid #d4c9b4;
+      }
+      .team-container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 44px;
+        align-items: stretch;
+      }
+      .team-card {
+        background: #ede8de;
+        padding: 36px 32px;
+        border-left: 3px solid #b8974a;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .team-card-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .team-card-header {
+        margin-bottom: 4px;
+      }
+      .people-card figure.portrait {
+        display: block;
+        margin: 0 0 1rem 0;
+      }
+      .people-card figure.portrait img {
+        display: block;
+        width: 180px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid rgba(184, 151, 74, 0.25);
+        background: #19130f;
+        margin: 0;
+      }
+      .people-card figure.portrait figcaption {
+        display: block;
+        margin-top: 0.6rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.78rem;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: #b8974a;
+        text-align: left;
+        line-height: 1.4;
+      }
+      .team-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 28px;
+        font-weight: 500;
+        color: #1a1614;
+        margin-bottom: 6px;
+      }
+      .team-role {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 18px;
+      }
+      .team-bio {
+        font-size: 16.5px;
+        font-weight: 300;
+        line-height: 1.75;
+        color: #2b231d;
+      }
+
+      /* ── CONTACT & FOOTER ── */
+      .contact-section {
+        background: #14100d;
+        color: #f5f0e8;
+        text-align: center;
+        padding: 90px 48px 80px;
+      }
+      .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .contact-estate-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 34px;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #f5f0e8;
+        margin-bottom: 12px;
+      }
+      .contact-location {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #b8974a;
+        margin-bottom: 36px;
+      }
+      .contact-details {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #d4c9b4;
+        line-height: 2.2;
+      }
+      .contact-details a {
+        color: #d4c9b4;
+        text-decoration: none;
+      }
+      .contact-website {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+        color: #b8974a;
+        letter-spacing: 0.08em;
+        margin-top: 28px;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1024px) {
+        .split-section {
+          flex-direction: column;
+        }
+        .split-text,
+        .split-image {
+          width: 100%;
+        }
+        .split-image {
+          height: 380px;
+        }
+        .split-text {
+          padding: 60px 40px;
+        }
+        .stats-grid,
+        .pillars-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .points-list {
+          grid-template-columns: 1fr;
+        }
+        .vignettes-grid,
+        .logistics-container,
+        .team-grid,
+        .residences-grid {
+          grid-template-columns: 1fr;
+        }
+        .highlights-section,
+        .pillars-section,
+        .points-section,
+        .experiences-section,
+        .logistics-section,
+        .team-section {
+          padding: 70px 32px;
+        }
+        .tkrg-section {
+          padding: 80px 32px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .stats-grid,
+        .pillars-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-title {
+          font-size: 38px;
+        }
+        .section-heading {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="hero">
+      <img class="hero-img" src="https://www.genspark.ai/api/files/s/KhTulW3e" alt="The Howard Backen Estate — Great Room Interior with panoramic Napa Valley views" data-height-listener-added="true">
+      <div class="hero-overlay">
+        <p class="hero-eyebrow">Pritchard Hill &nbsp;·&nbsp; St. Helena, California</p>
+        <h1 class="hero-title">The Howard<br>Backen Estate</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-subtitle">An Architectural Masterpiece on Napa Valley's Legendary Pritchard Hill</p>
+        <p class="hero-tagline">Architecture &nbsp;•&nbsp; Privacy &nbsp;•&nbsp; Culinary Excellence &nbsp;•&nbsp; Rare Access &nbsp;•&nbsp; Exceptional Hosting</p>
+      </div>
+    </header>
+
+    
+    <section class="pitch-banner">
+      <p class="pitch-text">
+        “The Howard Backen Estate is a private architectural retreat set on more than 500 acres atop Napa Valley’s Pritchard Hill. It combines iconic Howard Backen design and complete privacy with extraordinary culinary and wine access, personalized hosting and accommodations for up to 14 guests. It isn’t simply a place to stay in Napa—the estate itself becomes the experience.”
+      </p>
+      <p class="pitch-pillars">Privacy &nbsp;•&nbsp; Access &nbsp;•&nbsp; Architecture &nbsp;•&nbsp; Hospitality</p>
+    </section>
+
+    
+    <section class="split-section" style="background: #f5f0e8;">
+      <div class="split-text">
+        <span class="section-label">Heritage &amp; Design</span>
+        <h2 class="section-heading">An Architectural Masterpiece on Pritchard Hill</h2>
+        <p class="editorial-p">
+          Perched atop 500+ private acres on Napa Valley's coveted Pritchard Hill, The Howard Backen Estate was conceived, designed, and built by legendary architect Howard Backen—widely celebrated as one of the most influential visionaries in modern Wine Country architecture. 
+        </p>
+        <p class="editorial-p">
+          Featuring interior design by Nicole Hollis and landscape architecture by Mark Bower, the property embodies Backen’s signature philosophy of creating structures in profound harmony with their natural surroundings. The architectural vocabulary is expressed through volcanic rock quarried directly on-site, dramatic cathedral timber ceilings, expansive retractable glass walls, proscenium-style archways, and a chef-inspired farmhouse kitchen with an outdoor wood-fired pizza oven—dissolving the boundary between interior grandeur and the breathtaking landscape.
+        </p>
+      </div>
+      <div class="split-image">
+        <img src="https://www.genspark.ai/api/files/s/A2v49to1" alt="Howard Backen Estate — Exterior dusk terrace with timber pergola and fire table" data-height-listener-added="true">
+      </div>
+    </section>
+
+    
+    <section class="highlights-section">
+      <div class="highlights-container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-label">Estate Overview</span>
+          <h2 class="section-heading">A Private World Without Parallel</h2>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Private Acres</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">10,000+</div>
+            <div class="stat-label">Sq. Ft. Curated Living</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">14</div>
+            <div class="stat-label">Guests Accommodated</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">7 / 7 / 3</div>
+            <div class="stat-label">Bedrooms / Fireplaces / Kitchens</div>
+          </div>
+        </div>
+
+        <div class="residences-grid">
+          <div class="residence-box">
+            <h3 class="residence-title">The Main House</h3>
+            <p class="residence-size">7,400 Sq. Ft. &nbsp;·&nbsp; 3 Bedrooms &nbsp;·&nbsp; 2 Full &amp; 2 Half Baths</p>
+            <p class="residence-desc">
+              The grand focal point of the estate, featuring cathedral timber ceilings, expansive living and dining pavilions, a professional chef’s kitchen, on-site quarried stone fireplaces, and multiple serene private courtyards designed for effortless entertaining.
+            </p>
+          </div>
+          <div class="residence-box">
+            <h3 class="residence-title">The Wing Suite</h3>
+            <p class="residence-size">Private Suite &nbsp;·&nbsp; Dedicated Entrance</p>
+            <p class="residence-desc">
+              Tucked seamlessly off the main house, this secluded retreat provides complete autonomy with its own private entrance, fully equipped kitchenette, intimate dining table for two, and a spacious walk-in dressing room.
+            </p>
+          </div>
+          <div class="residence-box">
+            <h3 class="residence-title">The Guest House</h3>
+            <p class="residence-size">1,100 Sq. Ft. &nbsp;·&nbsp; 1 Bedroom &nbsp;·&nbsp; Full Kitchen</p>
+            <p class="residence-desc">
+              A private home in its own right, complete with a full kitchen, generous living and dining areas, a luxurious ensuite bath with a vintage clawfoot soaking tub, and a refreshing al fresco outdoor shower.
+            </p>
+          </div>
+          <div class="residence-box">
+            <h3 class="residence-title">Two Guest Cottages</h3>
+            <p class="residence-size">500 Sq. Ft. Each &nbsp;·&nbsp; 2 Private Suites</p>
+            <p class="residence-desc">
+              Two identical, freestanding hillside sanctuaries featuring private entrances, ensuite bathrooms, and sweeping vistas overlooking the resort pool, Rector Ridge and Reservoir, and the Mayacamas Mountains.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="cinematic-strip">
+      <img src="https://www.genspark.ai/api/files/s/D5VJmMbe" alt="Howard Backen Estate — Twilight pool with stone outdoor fireplace and mountain sunset" data-height-listener-added="true">
+    </div>
+
+    
+    <section class="split-section" style="background: #f5f0e8;">
+      <div class="split-image">
+        <img src="https://www.genspark.ai/api/files/s/KhTulW3e" alt="Howard Backen Estate — Living Pavilion looking over Pritchard Hill and the Napa Valley basin" data-height-listener-added="true">
+      </div>
+      <div class="split-text">
+        <span class="section-label">The Enclave</span>
+        <h2 class="section-heading">Why Pritchard Hill</h2>
+        <p class="editorial-p">
+          Pritchard Hill stands alone as one of Napa Valley's most prestigious, coveted, and geographically dramatic addresses. Hidden above the fog line on the eastern ridges of the valley, it is home to an extraordinary concentration of California's most legendary cult wineries and storied private vineyards.
+        </p>
+        <p class="editorial-p">
+          From its commanding elevated vantage point, the estate offers unobstructed panoramic views across the Mayacamas Mountains, Rector Ridge, Rector Reservoir, and the Napa Valley floor below. Access here is inherently discreet and relationship-driven—granting residents and their guests an intimate sanctuary far removed from the public valley floor, yet connected to the very pinnacle of Napa winemaking.
+        </p>
+      </div>
+    </section>
+
+    
+    <section class="pillars-section">
+      <div class="pillars-header">
+        <span class="section-label">Sales Philosophy</span>
+        <h2 class="section-heading light">“Staying Here Becomes the Napa Experience”</h2>
+        <p class="pillars-positioning">
+          This isn't simply where guests stay while visiting Napa Valley. The estate itself is the destination.
+        </p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <span class="pillar-num">PILLAR 01</span>
+          <h3 class="pillar-name">Absolute Privacy</h3>
+          <p class="pillar-body">
+            Over 500 private contiguous acres ensuring complete seclusion. Unlike shared luxury resorts, every courtyard, terrace, and pool belongs exclusively to your party, offering uncompromised discretion.
+          </p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">PILLAR 02</span>
+          <h3 class="pillar-name">Master Architecture</h3>
+          <p class="pillar-body">
+            Living directly inside an authentic Howard Backen masterwork. Featuring craft-led Bay Area maker appointments, Nicole Hollis interiors, and Mark Bower landscapes that define Wine Country style.
+          </p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">PILLAR 03</span>
+          <h3 class="pillar-name">Rare Access</h3>
+          <p class="pillar-body">
+            Privileged relationships unlock doors unavailable through public channels—from Thomas Keller Restaurant Group culinary access to private cellar appointments at neighboring cult wineries.
+          </p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">PILLAR 04</span>
+          <h3 class="pillar-name">Bespoke Hosting</h3>
+          <p class="pillar-body">
+            Dedicated on-property hospitality led by Estate Manager Jennifer Murphy and Head of Culinary Experiences Chef Stefani De Palma, shaping every itinerary and moment around the guest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="points-section">
+      <div class="points-container">
+        <div style="text-align: center;">
+          <span class="section-label">Key Distinctions</span>
+          <h2 class="section-heading">High-Conviction Selling Points</h2>
+        </div>
+        <ul class="points-list">
+          <li class="point-item">
+            <h4>The Premier Ridge Position</h4>
+            <p>Occupies the most commanding, panoramic land parcel on coveted Pritchard Hill, looking directly across Rector Reservoir and the Mayacamas.</p>
+          </li>
+          <li class="point-item">
+            <h4>500+ Acres of Total Seclusion</h4>
+            <p>An uncompromising private sanctuary for high-profile individuals, families, and executive leadership seeking absolute discretion.</p>
+          </li>
+          <li class="point-item">
+            <h4>Iconic Architectural Pedigree</h4>
+            <p>A rare synergy of Howard Backen architecture, Nicole Hollis interior curation, and Mark Bower landscape design.</p>
+          </li>
+          <li class="point-item">
+            <h4>TKRG Culinary Partnership</h4>
+            <p>Exclusive relationship with the Thomas Keller Restaurant Group for in-estate chef services and regional reservation assistance.</p>
+          </li>
+          <li class="point-item">
+            <h4>Insider Pritchard Hill Wine Access</h4>
+            <p>Direct personal relationships granting private, behind-the-gates tastings at celebrated neighboring cult vineyards.</p>
+          </li>
+          <li class="point-item">
+            <h4>Flexible Multi-Dwelling Layout</h4>
+            <p>Four discrete residential structures across 10,000+ sq. ft. providing intimate gathering spaces and complete personal privacy for up to 14 guests.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <section class="tkrg-section">
+      <div class="tkrg-container">
+        <span class="section-label">Culinary Partnership</span>
+        <h2 class="section-heading light">The Thomas Keller Relationship</h2>
+        
+        <p class="tkrg-quote">
+          “It is a pleasure to be partnering with this estate, one of the most beautiful properties in the wine country. We look forward to hosting guests at The French Laundry and our other restaurants in Napa Valley, as well as providing exclusive in-home culinary experiences helmed by our team.”
+        </p>
+        <p class="tkrg-author">— Chef Thomas Keller</p>
+
+        <div class="tkrg-policy-note">
+          <p>
+            <strong>Clear Reservation Assistance Protocol:</strong> The estate’s partnership with the Thomas Keller Restaurant Group provides extraordinary culinary access—including dedicated reservation assistance at The French Laundry, Bouchon Bistro, Ad Hoc, and Regiis Ova Bar, alongside custom in-estate culinary experiences helmed by TKRG-trained talent. In maintaining the highest level of integrity, please note that all dining access is presented as <em>dedicated reservation assistance</em> rather than an unverified guarantee until confirmed by the estate hospitality team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="experiences-section">
+      <div class="experiences-container">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <span class="section-label">Curated Itineraries</span>
+          <h2 class="section-heading light">Signature Estate Experiences</h2>
+        </div>
+
+        <div class="vignettes-grid">
+          
+          <div class="vignette-card">
+            <p class="vignette-tag">Experience 01</p>
+            <h3 class="vignette-title">Thomas Keller Culinary Access</h3>
+            <p class="vignette-body">
+              Far surpassing a standard dinner reservation, this partnership transforms estate dining into a world-class gastronomic journey. Guests enjoy priority reservation assistance at legendary dining rooms such as The French Laundry, alongside bespoke in-home multi-course tastings prepared in the estate’s chef’s kitchen. Head of Culinary Experiences Chef Stefani De Palma curates customized menu pairings that showcase both seasonal Napa ingredients and the cellar’s finest vintages.
+            </p>
+          </div>
+
+          
+          <div class="vignette-card">
+            <p class="vignette-tag">Experience 02</p>
+            <h3 class="vignette-title">Pritchard Hill Private Wine Access</h3>
+            <p class="vignette-body">
+              Pritchard Hill is renowned for producing some of the world's most sought-after, collector-grade Cabernet Sauvignons. Through personal proprietor relationships, guests enjoy private, behind-closed-doors tastings and barrel samplings at neighboring cult wineries that do not open to the general public. Wine discovery becomes an intimate, insider dialogue with winemakers rather than a conventional tasting room visit.
+            </p>
+          </div>
+
+          
+          <div class="vignette-card">
+            <p class="vignette-tag">Experience 03</p>
+            <h3 class="vignette-title">A Restorative Day at The Estate</h3>
+            <p class="vignette-body">
+              Designed as an immersive on-property wellness sanctuary, an entire day can unfold effortlessly without leaving the grounds. Begin with sunrise yoga on the terrace overlooking mist-draped vineyards, followed by restorative poolside lounging and in-residence massage therapies. Afternoon brings a private tasting of Keller Hall Keller (KHK) estate wines, culminating in a sunset al fresco dinner served under the vine-draped timber pergola.
+            </p>
+          </div>
+
+          
+          <div class="vignette-card">
+            <p class="vignette-tag">Experience 04</p>
+            <h3 class="vignette-title">Architecture &amp; Design Immersion</h3>
+            <p class="vignette-body">
+              For design connoisseurs, the estate itself offers a masterclass in California rustic-modern architecture. Guests experience how Howard Backen's massive sliding glass walls seamlessly integrate indoor timber pavilions with the surrounding mountain landscape. The organic palette of raw stone, blackened steel, and linen textures conceived by Nicole Hollis creates a deeply calming, museum-grade environment that inspires throughout every hour of the day.
+            </p>
+          </div>
+        </div>
+
+        
+        <div style="margin-top: 32px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: stretch;">
+          <div class="vignette-card" style="display: flex; flex-direction: column; justify-content: center;">
+            <p class="vignette-tag">Experience 05 &nbsp;·&nbsp; Beyond The Hill</p>
+            <h3 class="vignette-title">Curated Napa Valley Adventures</h3>
+            <p class="vignette-body">
+              The estate’s dedicated concierge orchestrates seamless excursions throughout Napa and Sonoma valleys. From dawn hot-air balloon flights drifting above the vineyard canopy and exhilarating exotic-car rallies through mountain passes, to private helicopter transfers and private cooking classes with master chefs, every adventure is custom-tailored to provide effortless discovery.
+            </p>
+          </div>
+          <div style="background: #19130f; border: 1px solid rgba(184, 151, 74, 0.22); padding: 24px; display: flex; align-items: center; justify-content: center;">
+            <img src="https://www.genspark.ai/api/files/s/mvDdl8t5" alt="Keller Hall Keller (KHK) Estate Napa Valley Cabernet Sauvignon" style="max-width: 100%; max-height: 280px; object-fit: contain; display: block;" data-height-listener-added="true">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="logistics-section">
+      <div class="logistics-container">
+        
+        <div class="logistics-box">
+          <span class="section-label">Arrival &amp; Transit</span>
+          <h2 class="section-heading" style="font-size: 32px;">Getting to The Estate</h2>
+          <p class="editorial-p">
+            <strong>Regional Transit:</strong> The estate is conveniently reachable from San Francisco International (SFO), Oakland International (OAK), and Sacramento International (SMF) airports. Private aviation is welcomed directly at Napa County Airport (APC), situated just 35 minutes away. Private chauffeured transfers can be coordinated for all arrivals, departures, and valley excursions.
+          </p>
+          <p class="editorial-p">
+            <strong>The Curated Arrival:</strong> The journey begins as guests wind along private hillside roads through world-renowned vineyards, ascending through native oak groves to reveal the secluded compound perched high above the Napa Valley basin—an immediate transition into complete tranquility.
+          </p>
+        </div>
+
+        
+        <div class="logistics-box">
+          <span class="section-label">Property Guidance</span>
+          <h2 class="section-heading" style="font-size: 32px;">Accessibility &amp; Terrain</h2>
+          <p class="editorial-p">
+            As an authentic hillside sanctuary situated across dynamic natural terrain, the estate’s accommodations and amenities are thoughtfully distributed across four distinct structures: the Main House, Wing Suite, Guest House, and two Guest Cottages.
+          </p>
+          <p class="editorial-p">
+            The property does not make a specific formal ADA-accessibility claim. We warmly invite guests with specific mobility requirements to speak directly with our estate management team prior to booking, allowing us to review the layout in detail and confirm that every accommodation perfectly satisfies your personal needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="team-section people-card">
+      <div class="team-container">
+        <div style="text-align: center;">
+          <span class="section-label">Hospitality Leadership</span>
+          <h2 class="section-heading">The People Behind the Estate</h2>
+        </div>
+        <div class="team-grid">
+          
+          <div class="team-card">
+            <div class="team-card-inner">
+              <figure class="portrait">
+                <img src="https://www.genspark.ai/api/files/s/SOeAMoZ9" alt="Jennifer Murphy, Estate Manager &amp; Host" data-height-listener-added="true">
+                <figcaption>Estate operations &amp; bespoke guest hosting.</figcaption>
+              </figure>
+              <div>
+                <div class="team-card-header">
+                  <h3 class="team-name">Jennifer Murphy</h3>
+                  <p class="team-role">Estate Manager &amp; Host</p>
+                </div>
+                <p class="team-bio">
+                  Jennifer oversees end-to-end estate operations and personally hosts exclusive gatherings, ensuring every stay unfolds with flawless execution. As the primary point of contact for guests, she harmonizes travel logistics, private concierge services, and on-property amenities to deliver a warm, discreet, and unforgettable Wine Country experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="team-card">
+            <div class="team-card-inner">
+              <figure class="portrait">
+                <img src="https://images.squarespace-cdn.com/content/v1/68112d8594c34810978834a3/783fa747-2b39-4a3f-a843-ab27709a364e/Chef+Stef.jpg" alt="Chef Stefani De Palma, Head of Culinary Experiences" data-height-listener-added="true">
+                <figcaption>Team USA, Bocuse d'Or 2025, captured in her element.</figcaption>
+              </figure>
+              <div>
+                <div class="team-card-header">
+                  <h3 class="team-name">Chef Stefani De Palma</h3>
+                  <p class="team-role">Head of Culinary Experiences</p>
+                </div>
+                <p class="team-bio">
+                  Chef Stefani leads the estate’s bespoke culinary program, crafting custom multi-course tasting menus, private interactive cooking masterclasses, and curated food-and-wine pairings that celebrate the nuance and elegance of Keller Hall Keller (KHK) vintages and the bountiful agricultural harvest of Napa Valley.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="contact-section">
+      <div class="contact-container">
+        <div style="width: 50px; height: 1px; background: #b8974a; margin: 0 auto 36px;"></div>
+        <p class="contact-estate-name">The Howard Backen Estate</p>
+        <p class="contact-location">Pritchard Hill &nbsp;·&nbsp; St. Helena, California</p>
+        <div class="contact-details">
+          <p>Jennifer Murphy &nbsp;·&nbsp; Estate Manager &amp; Host</p>
+          <p><a href="tel:9259150025">(925) 915-0025</a></p>
+          <p><a href="mailto:Jennifer@BackenEstate.com">Jennifer@BackenEstate.com</a></p>
+        </div>
+        <div style="width: 40px; height: 1px; background: #b8974a; margin: 36px auto 0;"></div>
+        <p class="contact-website"><a href="https://backenestate.com" style="color: #b8974a; text-decoration: none;">BackenEstate.com</a></p>
+      </div>
+    </footer>
+  
+
+</body></html>
